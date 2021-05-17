@@ -3,10 +3,14 @@
  */
 package lab.dennis.primefactor;
 
+import java.util.Collections;
 import java.util.List;
 
 public class PrimeFactor {
     public List<Integer> generate(int n) {
-        return List.of(1);
+        if (n > 1) {
+            return List.of(2);
+        }
+        return Collections.emptyList();
     }
 }

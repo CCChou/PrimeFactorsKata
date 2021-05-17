@@ -11,6 +11,12 @@ public class PrimeFactorTest {
     @Test
     public void generate_one_correct() {
         PrimeFactor primeFactor = new PrimeFactor();
-        assertThat(primeFactor.generate(1)).contains(1);
+        assertThat(primeFactor.generate(1)).isEmpty();
+    }
+
+    @Test
+    public void generate_two_correct() {
+        PrimeFactor primeFactor = new PrimeFactor();
+        assertThat(primeFactor.generate(2)).containsExactly(2);
     }
 }
