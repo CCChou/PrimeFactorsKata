@@ -35,4 +35,29 @@ public class PrimeFactorTest {
     public void generate_four_correct() {
         assertThat(primeFactor.generate(4)).containsExactly(2,2);
     }
+
+    @Test
+    public void generate_five_correct() {
+        assertThat(primeFactor.generate(5)).containsExactly(5);
+    }
+
+    @Test
+    public void generate_six_correct() {
+        assertThat(primeFactor.generate(6)).containsExactly(2,3);
+    }
+
+    @Test
+    public void generate_seven_correct() {
+        assertThat(primeFactor.generate(7)).containsExactly(7);
+    }
+
+    @Test
+    public void generate_eight_correct() {
+        assertThat(primeFactor.generate(8)).containsExactly(2,2,2);
+    }
+
+    @Test
+    public void generate_nine_correct() {
+        assertThat(primeFactor.generate(9)).containsExactly(3,3);
+    }
 }
