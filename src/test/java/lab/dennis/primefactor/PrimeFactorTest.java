@@ -3,20 +3,26 @@
  */
 package lab.dennis.primefactor;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PrimeFactorTest {
+    private static PrimeFactor primeFactor;
+
+    @BeforeClass
+    public static void setUp() {
+        primeFactor = new PrimeFactor();
+    }
+
     @Test
     public void generate_one_correct() {
-        PrimeFactor primeFactor = new PrimeFactor();
         assertThat(primeFactor.generate(1)).isEmpty();
     }
 
     @Test
     public void generate_two_correct() {
-        PrimeFactor primeFactor = new PrimeFactor();
         assertThat(primeFactor.generate(2)).containsExactly(2);
     }
 }
