@@ -30,4 +30,9 @@ public class PrimeFactorTest {
     public void generate_three_correct() {
         assertThat(primeFactor.generate(3)).containsExactly(3);
     }
+
+    @Test
+    public void generate_four_correct() {
+        assertThat(primeFactor.generate(4)).containsExactly(2,2);
+    }
 }

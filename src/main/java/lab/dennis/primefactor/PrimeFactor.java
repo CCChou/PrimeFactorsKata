@@ -3,19 +3,21 @@
  */
 package lab.dennis.primefactor;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeFactor {
     public List<Integer> generate(int n) {
-        if (n < 2) {
-            return Collections.emptyList();
+        List<Integer> primes = new ArrayList<Integer>();
+        int base = 2;
+        while (n > 1) {
+            if (n % base == 0) {
+                primes.add(base);
+                n /= base;
+            } else {
+                base++;
+            }
         }
-
-        if (n == 2) {
-            return List.of(2);
-        } else {
-            return List.of(3);
-        }
+        return primes;
     }
 }
