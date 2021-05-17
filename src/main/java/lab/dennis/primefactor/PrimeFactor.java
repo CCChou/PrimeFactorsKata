@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PrimeFactor {
     public List<Integer> generate(int n) {
-        List<Integer> primes = new ArrayList<Integer>();
+        List<Integer> primes = new ArrayList<>();
         int base = 2;
         while (n > 1) {
             if (n % base == 0) {
