@@ -25,4 +25,9 @@ public class PrimeFactorTest {
     public void generate_two_correct() {
         assertThat(primeFactor.generate(2)).containsExactly(2);
     }
+
+    @Test
+    public void generate_three_correct() {
+        assertThat(primeFactor.generate(3)).containsExactly(3);
+    }
 }

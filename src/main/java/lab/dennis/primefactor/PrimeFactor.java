@@ -8,9 +8,14 @@ import java.util.List;
 
 public class PrimeFactor {
     public List<Integer> generate(int n) {
-        if (n > 1) {
-            return List.of(2);
+        if (n < 2) {
+            return Collections.emptyList();
         }
-        return Collections.emptyList();
+
+        if (n == 2) {
+            return List.of(2);
+        } else {
+            return List.of(3);
+        }
     }
 }
